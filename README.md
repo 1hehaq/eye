@@ -81,7 +81,13 @@ Eye works by performing active reconnaissance, including port scanning, SSL/TLS 
     bundle install
     ```
 
-4. Run Eye and follow the setup process to configure the target domain, enumeration options, and analysis preferences.
+4. Run Eye:
+
+   ```bash
+   ruby eye.rb
+   ```
+
+5. Run Eye and follow the setup process to configure the target domain, enumeration options, and analysis preferences.
 
 ## Requirements
 
