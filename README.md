@@ -66,7 +66,7 @@ Eye works by performing active reconnaissance, including port scanning, SSL/TLS 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Therealhaq/Eye.git
+    git clone https://github.com/1hehaq/Eye.git
     ```
 
 2. Navigate to the Eye directory:
