@@ -28,20 +28,20 @@ Eye is a powerful command-line tool designed for conducting comprehensive vulner
              +--------------+---+---+--------------+
              |              |       |              |
              v              v       v              v
-+----------------+  +----------------+  +----------------+
-|                |  |                |  |                |
-|   Port         |  |   SSL/TLS      |  |   Subdomain   |
-|   Scanning     |  |   Certificate  |  |   Enumeration |
-|                |  |   Checking     |  |                |
-+----------------+  +----------------+  +----------------+
-         |                   |                   |
-         v                   v                   v
-+----------------+  +----------------+  +----------------+
-|                |  |                |  |                |
-|   Vulnerability|  |   AI-Powered   |  |   URL          |
-|   Assessment   |  |   Analysis     |  |   Enumeration  |
-|                |  |                |  |                |
-+----------------+  +----------------+  +----------------+
+      +----------------+  +----------------+  +----------------+
+      |                |  |                |  |                |
+      |   Port         |  |   SSL/TLS      |  |   Subdomain   |
+      |   Scanning     |  |   Certificate  |  |   Enumeration |
+      |                |  |   Checking     |  |                |
+      +----------------+  +----------------+  +----------------+
+               |                   |                   |
+               v                   v                   v
+      +----------------+  +----------------+  +----------------+
+      |                |  |                |  |                |
+      |   Vulnerability|  |   AI-Powered   |  |   URL          |
+      |   Assessment   |  |   Analysis     |  |   Enumeration  |
+      |                |  |                |  |                |
+      +----------------+  +----------------+  +----------------+
 
 
 
