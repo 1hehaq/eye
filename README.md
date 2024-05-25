@@ -30,8 +30,8 @@ Eye is a powerful command-line tool designed for conducting comprehensive vulner
              v              v       v              v
       +----------------+  +----------------+  +----------------+
       |                |  |                |  |                |
-      |   Port         |  |   SSL/TLS      |  |   Subdomain   |
-      |   Scanning     |  |   Certificate  |  |   Enumeration |
+      |   Port         |  |   SSL/TLS      |  |   Subdomain    |
+      |   Scanning     |  |   Certificate  |  |   Enumeration  |
       |                |  |   Checking     |  |                |
       +----------------+  +----------------+  +----------------+
                |                   |                   |
