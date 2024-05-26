@@ -78,7 +78,7 @@ Eye works by performing active reconnaissance, including port scanning, SSL/TLS 
 3. Install dependencies:
 
     ```bash
-    bundle install
+    sudo bundle install
     ```
 
 4. Run Eye:
