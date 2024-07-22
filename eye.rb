@@ -11,44 +11,34 @@ require 'openssl'
 require 'socket'
 require 'net/ping'
 
-# Create an instance of Artii with a font
 artii = Artii::Base.new(font: 'fraktur')
 
-# Generate ASCII art for the text "Eye"
 eye_banner = "\n" + "\e[31m" + artii.asciify('Eye') + "\e[0m" + "\e[5m"
 
-# Print the eye ASCII art banner
 puts eye_banner
 
-# Input Module
 module Input
   def self.get_input
     Wizard.run
   end
 end
 
-# Wizard Module
 module Wizard
   def self.run
     puts "\n\nLet's get started with the setup process."
 
-    # Step 1: Target IP or Domain
     print "Enter the target IP or domain: " + "\e[0m"
     target = gets.chomp
     puts "Target set to: #{target}"
 
-    # Step 2: Subdomain Enumeration
     print "Do you want to perform Subdomain Enumeration? (y/n): "
     subdomains_file = ask_for_file("subdomains")
 
-    # Step 3: URL Enumeration
     print "Do you want to perform URL Enumeration? (y/n): "
     urls_file = ask_for_file("URLs")
 
-    # Step 4: Configure AI Analysis
     ai_enabled = enable_ai_analysis?
 
-    # Store user input in a configuration hash
     {
       target: target,
       subdomains_file: subdomains_file,
@@ -78,7 +68,6 @@ module Wizard
   end
 end
 
-# Active Reconnaissance Module
 module ActiveReconnaissance
   INBUILT_SUBDOMAINS = %w[
     www
@@ -366,7 +355,6 @@ module ActiveReconnaissance
   end
 end
 
-# SSL/TLS Certificate Checker Module
 module SSLCertificateChecker
   def self.check_certificate(domain)
     context = OpenSSL::SSL::SSLContext.new
@@ -392,7 +380,6 @@ module SSLCertificateChecker
   end
 end
 
-# Presentation Module
 module Presentation
   def self.print_results(vulnerabilities, ssl_info, open_ports)
     puts "\nScan Results 📊:"
@@ -426,7 +413,6 @@ module Presentation
   end
 end
 
-# AI Module for prioritizing vulnerabilities
 module AI
   def self.prioritize_vulnerabilities(configuration, vulnerabilities)
     ai_service = OpenAI::Client.new(access_token: 'your_api_key_here')
@@ -446,7 +432,6 @@ module AI
   end
 end
 
-# Nmapr Scan Function (Replaced with Net::Ping)
 def nmapr_scan(ipv4_target)
   ports = []
   (1..65535).each do |port|
@@ -455,12 +440,7 @@ def nmapr_scan(ipv4_target)
   ports
 end
 
-def parse_nmapr_results
-  # This method is no longer needed since we're not using Nmapr anymore
-  []
-end
 
-# Main Execution Function
 def main
   configuration = Input.get_input
   target = configuration[:target]
@@ -483,7 +463,6 @@ def main
 
   puts "\nRunning the Evaluation Mode ⚙️: "
 
-  vulnerabilities = []  # No longer using Nmapr, so initialize an empty array
 
   if configuration[:ai_analysis]
     puts "Running AI analysis 🤖: "
